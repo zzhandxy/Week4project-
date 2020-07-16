@@ -53,4 +53,4 @@ newdata <- data %>%
 
 ### Outputs the final data
 
-write.table(newdata, "./course-project/newdata.txt")
+write.table(newdata, "./course-project/newdata.txt", row.name=FALSE)

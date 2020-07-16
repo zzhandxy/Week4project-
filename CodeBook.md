@@ -1,10 +1,4 @@
----
-title: "CodeBook"
-author: "Zhonghao Zhao"
-date: "2020/7/16"
-output: html_document
----
-
+## Code Book
 
 ### Data
 

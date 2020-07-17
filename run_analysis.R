@@ -7,7 +7,7 @@ URL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR
 download.file(URL, "./course-project/data.zip")
 data_unzip <- unzip("./course-project/data.zip", exdir = "./course-project")
 
-### Loads the original data R
+### Loads the original data to R
 
 train_x <- read.table("./course-project/UCI HAR Dataset/train/X_train.txt")
 train_y <- read.table("./course-project/UCI HAR Dataset/train/y_train.txt")
@@ -28,14 +28,14 @@ feature <- read.table("./course-project/UCI HAR Dataset/features.txt", stringsAs
 
 ### Extracts only the measurements on the mean and standard deviation for each measurement
 
-data <- data_temp[,c(1,2,grep("mean|std",feature)+2)]
-colnames(data) <- c("subject", "activity", feature[grep("mean|std",feature)])
+data <- data_temp[,c(1,2,grep("mean\\(\\)|std\\(\\)",feature)+2)]
+colnames(data) <- c("subject", "activity", feature[grep("mean\\(\\)|std\\(\\)",feature)])
 name_act <- read.table("./course-project/UCI HAR Dataset/activity_labels.txt")
 
 ### Uses descriptive activity names to name the activities in the data set
 
 data$activity <- as.factor(data$activity)
-levels(data_with_feature$activity) <- name_act$V2
+levels(data$activity) <- name_act$V2
 
 ### Appropriately labels the data set with descriptive variable names
 

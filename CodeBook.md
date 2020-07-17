@@ -28,13 +28,13 @@ The data used in this project is provided by <https://d396qusza40orc.cloudfront.
 
 (3)`grep()`:search for matches to "mean()" and "sd()"
 
-(4)`as.factor()`: convert the class to 'factor'
+(4)`as.factor()`: convert the class of 'activity' to factor
 
-(5)`levels()`: return the labels of a factor object
+(5)`levels()`: return the labels of 'activity'
 
-(6)`gsub()`:perform replacement of the all matches 
+(6)`gsub()`:perform replacement of the all matches to make the 'activity' more descriptive
 
-(7)`group_by()`:convert an exiting tbl into a grouped tbl where operations are performed "by group"
+(7)`group_by()`:convert the data into a grouped tbl where operations are performed by subject and activity
 
 (8)`summarise_each()`:return a `data.frame` contains all means for each activity and subject
 
